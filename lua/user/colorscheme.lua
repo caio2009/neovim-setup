@@ -1,8 +1,3 @@
--- vim.g.dracula_transparent_bg = true
--- vim.cmd[[ colorscheme dracula ]]
-
--- vim.cmd[[ colorscheme NeoSolarized ]]
-
 require("gruvbox").setup {
   undercurl = true,
   underline = true,
