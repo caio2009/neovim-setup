@@ -7,6 +7,7 @@ local servers = {
   "html",
   "pyright", 
   "tsserver", 
+  "vuels",
 }
 
 ---

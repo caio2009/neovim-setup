@@ -5,6 +5,10 @@ map("n", "<Space>", "<NOP>", { noremap = true, silent = true })
 -- Leader key
 vim.g.mapleader = " "
 
+-- Write buffer
+map("i", "<C-s>", "<ESC>:w<CR>", { noremap = true, silent = true })
+map("n", "<C-s>", ":w<CR>", { noremap = true, silent = true })
+
 -- Toggle highlight search
 map("n", "<Leader>hl", ":set hlsearch!<CR>", { noremap = true, silent = true })
 
@@ -53,3 +57,4 @@ map("n", "H", ":lua require('harpoon.ui').nav_prev()<CR>", { noremap = true, sil
 
 -- I hate escape
 -- map("i", "jk", "<ESC>", { noremap = true, silent = true })
+map("i", "<C-c>", "<ESC>", { noremap = true, silent = true })

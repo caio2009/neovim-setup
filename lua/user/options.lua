@@ -21,7 +21,7 @@ local options = {
   termguicolors = true,
   scrolloff = 8,
   completeopt = { "menuone", "noselect" },
-  -- colorcolumn = 80,
+  colorcolumn = "80",
   signcolumn = "yes",
 }
 

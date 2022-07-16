@@ -1,4 +1,4 @@
-local api = vim.api
+ocal api = vim.api
 
 -- Indentation setup
 

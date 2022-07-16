@@ -21,8 +21,7 @@ return require("packer").startup(function(use)
   use "windwp/nvim-autopairs"
   use "terrortylor/nvim-comment"
 
-  use "Mofiqul/dracula.nvim"
-  use "ellisonleao/gruvbox.nvim"
+  use "NTBBloodbath/doom-one.nvim"
 
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"

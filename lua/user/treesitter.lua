@@ -11,12 +11,13 @@ require("nvim-treesitter.configs").setup {
   },
   highlight = {
     enable = true,
+    disable = { "html" },
   },
   autopairs = {
     enable = true,
   },
   indent = { 
     enable = true, 
-    disable = { "python" }, 
+    disable = { "python", "html" }, 
   },
 }

@@ -1,6 +1,7 @@
 require "user.options"
 require "user.plugins"
 require "user.explorer"
+require "user.fuzzyfinder"
 require "user.lsp"
 require "user.cmp"
 require "user.treesitter"
