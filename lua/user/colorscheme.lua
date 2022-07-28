@@ -1,6 +1,7 @@
-require("doom-one").setup {
-  transparent_background = true,
-}
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_transparent = true
+vim.g.tokyonight_transparent_sidebar = true
 
--- vim.cmd[[ colorscheme doom-one ]]
--- vim.cmd[[ highlight Normal guibg=none ]]
+vim.g.tokyonight_colors = { bg_visual = "#311b92" }
+
+vim.cmd[[ colorscheme tokyonight ]]

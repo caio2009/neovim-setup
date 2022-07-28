@@ -11,6 +11,7 @@ return require("packer").startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
+  use "lambdalisue/fern.vim"
   use "nvim-lualine/lualine.nvim"
   use "lewis6991/gitsigns.nvim"
   use "folke/trouble.nvim"
@@ -21,7 +22,7 @@ return require("packer").startup(function(use)
   use "windwp/nvim-autopairs"
   use "terrortylor/nvim-comment"
 
-  use "NTBBloodbath/doom-one.nvim"
+  use "folke/tokyonight.nvim"
 
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"

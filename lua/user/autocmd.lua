@@ -2,30 +2,66 @@ local api = vim.api
 
 -- Indentation setup
 
-local indentationGroup = api.nvim_create_agroup("IndentationSetup", { clear = true })
+local indentationGroup = api.nvim_create_augroup("IndentationSetup", { clear = true })
 
 api.nvim_create_autocmd(
-  "FileType python",
-  command = [[ setlocal shiftwidth=4 tabstop=4 softtabstop=4 ]],
-  group = indentationGroup,
+  "FileType",
+  {
+    pattern = "python",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
 )
 
 api.nvim_create_autocmd(
-  "FileType c",
-  command = [[ setlocal shiftwidth=4 tabstop=4 softtabstop=4 ]],
-  group = indentationGroup,
+  "FileType",
+  {
+    pattern = "c",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
 )
 
 api.nvim_create_autocmd(
-  "FileType cpp",
-  command = [[ setlocal shiftwidth=4 tabstop=4 softtabstop=4 ]],
-  group = indentationGroup,
+  "FileType",
+  {
+    pattern = "cpp",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
 )
 
 api.nvim_create_autocmd(
-  "FileType cs",
-  command = [[ setlocal shiftwidth=4 tabstop=4 softtabstop=4 ]],
-  group = indentationGroup,
+  "FileType",
+  {
+    pattern = "cs",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
+)
+
+api.nvim_create_autocmd(
+  "FileType",
+  {
+    pattern = "php",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
+)
+
+---
+
+--- Fern remaping
+
+local netrwGroup = api.nvim_create_augroup("NetrwSetup", { clear = true })
+
+api.nvim_create_autocmd(
+  "FileType",
+  {
+    pattern = "fern",
+    command = [[nmap <buffer> o <CR>]],
+    group = netrwGroup,
+  }
 )
 
 ---

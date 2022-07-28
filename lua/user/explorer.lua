@@ -1,5 +1,13 @@
-require('nvim-tree').setup {
-  git = {
-    ignore = false
-  }
-}
+-- require('nvim-tree').setup {
+--   git = {
+--     ignore = false
+--   },
+--   diagnostics = {
+--     enable = true,
+--     show_on_dirs = true,
+--   },
+-- }
+
+-- vim.g.netrw_keepdir = 0
+-- vim.g.netrw_banner = 0
+-- vim.g.netrw_localcopydircmd = "copy -r"
