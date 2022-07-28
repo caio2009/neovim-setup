@@ -1,6 +1,7 @@
 ---
 
 local servers = { 
+  "csharp_ls", 
   "cssls",
   "denols", 
   "gopls", 
@@ -36,7 +37,7 @@ local config = {
   float = {
     focusable = false,
     style = "minimal",
-    border = "rounded",
+    border = "none",
     source = "always",
     header = "",
     prefix = "",
@@ -46,12 +47,12 @@ local config = {
 vim.diagnostic.config(config)
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "rounded",
+  border = "none",
   width = 60,
 })
 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-  border = "rounded",
+  border = "none",
   width = 60,
 })
 
@@ -77,7 +78,7 @@ local on_attach = function(client, bufnr)
     bufnr,
     "n",
     "gl",
-    '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
+    '<cmd>lua vim.diagnostic.open_float({ border = "none" })<CR>',
     opts
   )
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)

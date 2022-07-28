@@ -1,4 +1,4 @@
-ocal api = vim.api
+local api = vim.api
 
 -- Indentation setup
 
@@ -18,6 +18,12 @@ api.nvim_create_autocmd(
 
 api.nvim_create_autocmd(
   "FileType cpp",
+  command = [[ setlocal shiftwidth=4 tabstop=4 softtabstop=4 ]],
+  group = indentationGroup,
+)
+
+api.nvim_create_autocmd(
+  "FileType cs",
   command = [[ setlocal shiftwidth=4 tabstop=4 softtabstop=4 ]],
   group = indentationGroup,
 )
