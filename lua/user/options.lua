@@ -1,5 +1,5 @@
 local options = {
-  guicursor = "",
+  -- guicursor = "",
   cursorline = false,
   number = true,
   relativenumber = true,
@@ -13,7 +13,7 @@ local options = {
   smartindent = true,
   wrap = false,
   smartcase = false,
-  -- showmode = false,
+  showmode = false,
   swapfile = false,
   backup = false,
   undofile = true,

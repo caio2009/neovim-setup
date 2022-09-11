@@ -1,3 +1,5 @@
+vim.cmd[[ packadd indent-blankline.nvim ]]
+
 local indent_blankline = require("indent_blankline")
 
 vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }

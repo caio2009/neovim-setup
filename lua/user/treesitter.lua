@@ -14,7 +14,7 @@ require("nvim-treesitter.configs").setup {
   },
   highlight = {
     enable = true,
-    disable = { "html" },
+    disable = { "html", "php" },
   },
   autopairs = {
     enable = true,
@@ -24,6 +24,7 @@ require("nvim-treesitter.configs").setup {
     disable = { 
       "html", 
       "python", 
+      "php",
       -- "javascript", 
     }, 
   },

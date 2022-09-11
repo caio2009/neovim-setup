@@ -11,18 +11,18 @@ return require("packer").startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  use "lambdalisue/fern.vim"
   use "nvim-lualine/lualine.nvim"
   use "lewis6991/gitsigns.nvim"
   use "folke/trouble.nvim"
   use "nvim-telescope/telescope.nvim"
   use "ThePrimeagen/harpoon"
-  -- use "lukas-reineke/indent-blankline.nvim"
+  use { "lukas-reineke/indent-blankline.nvim", opt = true }
 
   use "windwp/nvim-autopairs"
   use "terrortylor/nvim-comment"
 
   use "folke/tokyonight.nvim"
+  use "ellisonleao/gruvbox.nvim"
 
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"

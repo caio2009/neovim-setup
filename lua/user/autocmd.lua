@@ -49,18 +49,13 @@ api.nvim_create_autocmd(
   }
 )
 
----
-
---- Fern remaping
-
-local netrwGroup = api.nvim_create_augroup("NetrwSetup", { clear = true })
 
 api.nvim_create_autocmd(
   "FileType",
   {
-    pattern = "fern",
-    command = [[nmap <buffer> o <CR>]],
-    group = netrwGroup,
+    pattern = "sql",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
   }
 )
 
