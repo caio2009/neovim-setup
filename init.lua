@@ -8,7 +8,7 @@ require "user.treesitter"
 require "user.colorscheme"
 require "user.statusline" -- status line needs to set after colorscheme
 require "user.comment"
-require "user.indentline"
+-- require "user.indentline"
 require "user.keymaps"
 
 require("gitsigns").setup {}
@@ -20,3 +20,4 @@ require("trouble").setup {
 require("nvim-autopairs").setup {}
 
 require "user.autocmd"
+

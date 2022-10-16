@@ -4,21 +4,21 @@ local luasnip = require "luasnip"
 
 --- Extend snippets to others file types
 
-luasnip.filetype_extend("javascriptreact", { "html" })
-luasnip.filetype_extend("javascript", { "html" })
-luasnip.filetype_extend("jsx", { "html" })
-luasnip.filetype_extend("typescriptreact", { "html" })
-luasnip.filetype_extend("vue", { "html" })
-luasnip.filetype_extend("php", { "html" })
+-- luasnip.filetype_extend("javascriptreact", { "html" })
+-- luasnip.filetype_extend("javascript", { "html" })
+-- luasnip.filetype_extend("jsx", { "html" })
+-- luasnip.filetype_extend("typescriptreact", { "html" })
+-- luasnip.filetype_extend("vue", { "html" })
+-- luasnip.filetype_extend("php", { "html" })
 
 ---
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
-local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
-end
+-- local check_backspace = function()
+--   local col = vim.fn.col "." - 1
+--   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+-- end
 
 cmp.setup {
   snippet = {

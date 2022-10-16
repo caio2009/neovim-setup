@@ -49,12 +49,29 @@ api.nvim_create_autocmd(
   }
 )
 
-
 api.nvim_create_autocmd(
   "FileType",
   {
     pattern = "sql",
     command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
+)
+
+api.nvim_create_autocmd(
+  "FileType",
+  {
+    pattern = "java",
+    command = [[setlocal shiftwidth=4 tabstop=4 softtabstop=4]],
+    group = indentationGroup,
+  }
+)
+
+api.nvim_create_autocmd(
+  "FileType",
+  {
+    pattern = "markdown",
+    command = [[setlocal tw=80 fo+=t]],
     group = indentationGroup,
   }
 )

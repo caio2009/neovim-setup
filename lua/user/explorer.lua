@@ -2,11 +2,15 @@ require('nvim-tree').setup {
   hijack_cursor = true,
   view = {
     adaptive_size = true,
-    -- mappings = {
-    --   list = {
-    --     { key = "o", action = "edit_in_place" },
-    --   },
-    -- },
+    mappings = {
+      list = {
+        { key = "o", action = "edit_in_place" },
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
+  renderer = {
+    group_empty = true,
   },
   git = {
     ignore = false
@@ -26,11 +30,15 @@ require('nvim-tree').setup {
 local M = {}
 
 function M.toggle_replace()
-  local view = require("nvim-tree.view")
-  if view.is_visible() then
-    view.close()
+  if vim.api.nvim_buf_get_name(0) == "" then
+    vim.cmd[[e .]]
   else
-    require("nvim-tree").open_replacing_current_buffer()
+    local view = require("nvim-tree.view")
+    if view.is_visible() then
+      view.close()
+    else
+      require("nvim-tree").open_replacing_current_buffer()
+    end
   end
 end
 

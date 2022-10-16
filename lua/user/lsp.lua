@@ -2,10 +2,9 @@
 
 local servers = { 
   "cssls",
-  "gopls", 
   "html",
+  "intelephense",
   "omnisharp",
-  "phpactor",
   "pyright", 
   "rust_analyzer", 
   "tsserver", 
@@ -25,7 +24,7 @@ vim.diagnostic.config(config)
 ---
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local on_attach = function(client, bufnr)
@@ -44,7 +43,7 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=true}' ]])
-  vim.keymap.set('n', '<Leader>i', vim.lsp.buf.formatting, opts)
+  -- vim.keymap.set('n', '<Leader>i', vim.lsp.buf.formatting, opts)
 end
 
 local lspconfig = require("lspconfig")
@@ -52,9 +51,9 @@ local lspconfig = require("lspconfig")
 for _, lsp in ipairs(servers) do
   if lsp == "tsserver" then
     lspconfig[lsp].setup {
+      -- root_dir = function(fname) return lspconfig.util.root_pattern("*")(fname) end,
       on_attach = on_attach,
       capabilities = capabilities,
-      -- root_dir = function(fname) return lspconfig.util.root_pattern("*")(fname) end,
     }
   elseif lsp == "omnisharp" then
     lspconfig[lsp].setup {

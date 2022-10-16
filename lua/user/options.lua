@@ -1,5 +1,5 @@
 local options = {
-  -- guicursor = "",
+  guicursor = "",
   cursorline = false,
   number = true,
   relativenumber = true,
@@ -19,9 +19,9 @@ local options = {
   undofile = true,
   incsearch = true,
   termguicolors = true,
-  scrolloff = 8,
+  -- scrolloff = 8,
   completeopt = { "menuone", "noselect" },
-  -- colorcolumn = "80",
+  colorcolumn = "80",
   signcolumn = "yes",
 }
 
